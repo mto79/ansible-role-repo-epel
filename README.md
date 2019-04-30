@@ -1,4 +1,4 @@
-Ansible Role: EPEL Repository
+MTO Ansible Role: EPEL Repository
 =========
 
 Installs the [EPEL repository](https://fedoraproject.org/wiki/EPEL) (Extra Packages for Enterprise Linux) for RHEL/CentOS.

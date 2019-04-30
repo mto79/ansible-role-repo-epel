@@ -1,0 +1,26 @@
+---
+# ansible-role-repo-epel/tasks/main.yml
+# Author: MTO 
+# Description: Task for installing the EPEL Repo on RedHat or Centos.
+#
+- name: Check if EPEL repo is already configured.
+  stat: path={{ repo-epel_file_path }}
+  register: repo-epel_file_result
+
+- name: Install EPEL repo.
+  yum:
+    name: "{{ repo-epel_url }}"
+    state: present
+  register: result
+  until: 'result.rc == 0'
+  retries: 5
+  delay: 10
+  when: not repo-epel_file_result.stat.exists
+
+- name: Import EPEL GPG key.
+  rpm_key:
+    key: "{{ repo-epel_gpg_key_url }}"
+    state: present
+  when: not repo-epel_file_result.stat.exists
+  ignore_errors: "{{ ansible_check_mode }}"
+

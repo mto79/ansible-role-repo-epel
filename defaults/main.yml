@@ -1,0 +1,8 @@
+---
+# ansible-role-repo-epel/defaults/main.yml
+# Author: MTO 
+# Description:  default variables for role repol epel
+#
+repo-epel_url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm"
+repo-epel_gpg_key_url: "/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}"
+repo-epel_file_path: "/etc/yum.repos.d/epel.repo"

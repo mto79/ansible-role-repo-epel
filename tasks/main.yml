@@ -23,4 +23,3 @@
     state: present
   when: not repo-epel_file_result.stat.exists
   ignore_errors: "{{ ansible_check_mode }}"
-

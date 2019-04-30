@@ -1,5 +1,5 @@
 galaxy_info:
-  author: MTO 
+  author: MTO
   description: EPEL repository for RHEL/CentOS.
   company: MTO
   license: "license (BSD, MIT)"

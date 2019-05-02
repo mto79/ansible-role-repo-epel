@@ -4,7 +4,7 @@
 # Description: Task for installing the EPEL Repo on RedHat or Centos.
 #
 - name: Check if EPEL repo is already configured.
-  stat: path="{{ repo_epel_file_path }}""
+  stat: path="{{ repo_epel_file_path }}"
   register: repo_epel_file_result
 
 - name: Install EPEL repo.

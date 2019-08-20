@@ -1,5 +1,5 @@
 ---
-# ansible-role-repo-epel/defaults/main.yml
+# ansible_role_repo_epel/defaults/main.yml
 # Author: MTO 
 # Description: Default variables for role repol epel
 #

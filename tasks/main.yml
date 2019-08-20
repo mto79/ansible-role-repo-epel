@@ -12,7 +12,7 @@
     name: "{{ repo_epel_url }}"
     state: present
   register: result
-  until: result.rc == 0
+  until: 'result.rc == 0'
   retries: 5
   delay: 10
   when: not repo_epel_file_result.stat.exists

@@ -31,7 +31,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: mto79.repo-epel }
+         - { role: mto79.repo_epel }
 
 License
 -------
@@ -41,4 +41,4 @@ MIT
 Author Information
 ------------------
 
-This role was created in 2019 by [MTO](https://www.mto.nu/).
+Created by [MTO](https://www.mto.nu/).
